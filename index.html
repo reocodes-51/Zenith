@@ -27,7 +27,40 @@
                 <button id="addBtn">
                     Add Task
                 </button>
+
             </section>
+
+            <section class="search-section">
+
+                <input 
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks"
+                >
+            </section>
+
+            <section class="filters">
+                <button id="allBtn">All</button>
+                <button id="pendingBtn">Pending</button>
+                <button id="completeBtn">Completed</button>
+            </section>
+
+            <section>
+                <ul id="taskList">
+                    <!-- Tasks will be added here using JavaScript -->
+                </ul>
+            </section>
+
+             <footer>
+
+            <p>Total Tasks : <span id="totalTasks">0</span></p>
+            <p>Completed : <span id="completedTasks">0</span></p>
+            <p>Remaining : <span id="remainingTasks">0</span></p>
+
+        </footer>
+
         </div>
+
+        <script src="js/script.js"></script>
 </body>
 </html>
