@@ -1,0 +1,157 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Colors */
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+
+    --background: #f4f7fb;
+    --card: #ffffff;
+
+    --text: #1f2937;
+    --secondary-text: #6b7280;
+
+    --border: #d1d5db;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Body */
+body {
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Main Card */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: var(--card);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+/* Heading */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--secondary-text);
+}
+
+/* Input Section */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Search */
+.search-section {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+/* Buttons */
+button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    font-size: 15px;
+    transition: .3s;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Task List */
+#taskList {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+/* Empty List Style */
+#taskList:empty::before {
+    content: "No tasks yet.";
+    display: block;
+    text-align: center;
+    color: var(--secondary-text);
+    padding: 30px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width:600px){
+
+    .task-input{
+        flex-direction:column;
+    }
+    .filters{
+        flex-wrap:wrap;
+    }
+    footer{
+        flex-direction:column;
+        align-items:center;
+    }
+    header h1{
+        font-size:32px;
+    }
+
+}
